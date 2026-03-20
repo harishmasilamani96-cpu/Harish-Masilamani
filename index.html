@@ -1,230 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
     <meta charset="UTF-8">
-    <title>Harish Masilamani</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harish Masilamani | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<script>
-
-    const settingsBox = document.getElementById("settingsBox");
-    const settingsPanel = document.getElementById("settingsPanel");
-
-    function addMaterial() {
-        const title = document.getElementById("materialTitle").value;
-        const link = document.getElementById("materialLink").value;
-
-        document.getElementById("materialsSection").innerHTML += `
-            <div class="project">
-                <h4>${title}</h4>
-                <a href="${link}" target="_blank" style="color:#38bdf8;">View Material</a>
-            </div>
-        `;
-    }
-
-    function addProject() {
-        const title = document.getElementById("projectTitle").value;
-        const desc = document.getElementById("projectDesc").value;
-
-        document.getElementById("projectsSection").innerHTML += `
-            <div class="project">
-                <h4>${title}</h4>
-                <p>${desc}</p>
-            </div>
-        `;
-    }
-
-    function updateResume() {
-        const link = document.getElementById("resumeLink").value;
-        document.getElementById("resumeBtn").href = link;
-        alert("Resume updated");
-    }
-</script>
 
 <body>
 
-<div class="main">
-
-    <!-- LEFT PROFILE -->
-    <div class="left">
-        <h2 class="title">PROFILE</h2>
-
-        <img src="c:\Users\ASUS\Downloads\profile.jpg.png" class="profile-img">
-
-        <h1>Harish Masilamani</h1>
-        <p class="role">B.Tech AI & DS Student (2024–2028)</p>
-
-        <div class="icons">
-            <a href="mailto:harishmasilamani96@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="mailto:2024110027@selvamtech.edu.in"><i class="fas fa-user-graduate"></i></a>
-            <a href="tel:9360012403"><i class="fas fa-phone"></i></a>
-            <a href="https://www.instagram.com/__solo__harish__?utm_source=qr&igsh=dHowM2twbGhkd3l0"><i class="fab fa-instagram"></i></a>
-
-            <!-- LinkedIn Link with Logo -->
-<a href="https://www.linkedin.com/in/harish-masilamani-00b42b37a" target="_blank" rel="noopener noreferrer">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
-         alt="LinkedIn" 
-         style="width:40px; height:40px;">
-</a>
-
-        </div>
-
-        <h3>ABOUT ME</h3>
-        <p class="about">
-            I am currently pursuing B.Tech in Artificial Intelligence
-            and Data Science at Selvam College of Technology, Namakkal.
-            I am interested in Web Development, Machine Learning,
-            and building real-time projects.
-        </p>
-        <div style="margin-top:10px;">
-    <p><b>Date of Birth:</b> 03 May 2006</p>
-    <p><b>Age:</b> <span id="age"></span> years</p>
-</div>
-
-<script>
-    const dob = new Date("2006-05-03"); // YYYY-MM-DD
-    const today = new Date();
-
-    let age = today.getFullYear() - dob.getFullYear();
-    const m = today.getMonth() - dob.getMonth();
-
-    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-        age--;
-    }
-
-    document.getElementById("age").innerText = age;
-</script>
-<h2>Contact Me</h2>
-
-<form action="https://submitform-zywnsm5euq-uc.a.run.app/api/5ir4p12TBOFLDaOTeQIY"
-      method="POST"
-      style="max-width:400px;">
-
-    <input type="text" name="name" placeholder="Your Name" required
-           style="width:100%;padding:10px;margin-bottom:10px;">
-
-    <input type="email" name="email" placeholder="Your Email" required
-           style="width:100%;padding:10px;margin-bottom:10px;">
-
-    <input type="tel" name="phone" placeholder="Your Phone Number" required
-           style="width:100%;padding:10px;margin-bottom:10px;">
-
-    <textarea name="message" placeholder="Your Message"
-              style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
-
-    <button type="submit"
-            style="padding:10px 20px;
-                   background:#38bdf8;
-                   color:#0f172a;
-                   border:none;
-                   border-radius:6px;
-                   font-weight:bold;">
-        Submit
-    </button>
-</form>
-
-
-    </div>
-
-    <!-- RIGHT DETAILS -->
-    <div class="right">
-        <h2>Education</h2>
-
-        <div class="project">
-            <h4>B.Tech – AI & DS</h4>
-            <p>2024 – 2028</p>
-            <p>Selvam College of Technology, Namakkal</p>
-        </div>
-        <div style="margin-top:20px;">
-    <a href="resume.html"
-       style="color:#38bdf8;
-              text-decoration:none;
-              border:2px solid #38bdf8;
-              padding:10px 20px;
-              border-radius:8px;
-              font-weight:bold;">
-        View Resume
-    </a>
-</div>
-
-
-        <h2>Contact</h2>
-
-        <div class="project">
-            <p><b>College Email:</b> 2024110027@selvamtech.edu.in</p>
-            <p><b>Personal Email:</b> harishmasilamani96@gmail.com</p>
-            <p><b>Phone:</b> 9360012403</p>
-        </div>
-        <h2>Study Materials</h2>
-
-<div class="project">
-    <h4>Python Notes</h4>
-    <p>Basic Python notes for beginners.</p>
-    <a href="materials/python.pdf" target="_blank" style="color:#38bdf8;">
-        View Material
-    </a>
-</div>
-
-<div class="project">
-    <h4>Machine Learning Notes</h4>
-    <p>ML basics and algorithms.</p>
-    <a href="materials/ml.pdf" target="_blank" style="color:#38bdf8;">
-        View Material
-    </a>
-</div>
-<h2>Projects</h2>
-
-<div class="project">
-    <h4>Portfolio Website</h4>
-    <p>Personal portfolio using HTML and CSS.</p>
-    <a href="#" style="color:#38bdf8;">View Project</a>
-</div>
-
-<div class="project">
-    <h4>Student Management System</h4>
-    <p>Mini project using Python.</p>
-    <a href="#" style="color:#38bdf8;">View Project</a>
-</div>
-
-<div class="project">
-    <h4>Machine Learning Mini Project</h4>
-    <p>Basic ML model for prediction.</p>
-    <a href="#" style="color:#38bdf8;">View Project</a>
-</div>
-
-
-
-        <h2>Skills</h2>
-
-        <div class="project">
-            <p>HTML, CSS, Python</p>
-            <p>Basics of Machine Learning</p>
-            <p>VS Code, GitHub</p>
-            <div style="margin-top:20px;">
-                <!-- OWNER UPLOAD SECTION -->
-<div id="uploadBox" style="display:none; margin-top:20px;">
-    <h3>Upload Study Material (Owner Only)</h3>
-
-    <input type="file" id="fileInput" accept=".pdf"
-           style="margin-bottom:10px;">
-
-    <button onclick="uploadFile()"
-            style="padding:8px 15px; background:#38bdf8; border:none; border-radius:6px;">
-        Upload
-    </button>
-</div>
-
+    <nav class="navbar">
+        <div class="logo">HM</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
     
-</div>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="login-btn" onclick="openLoginModal()">Login</button></li>
+        </ul>
+    </nav>
 
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="profile.jpg.jpg" class="profile-pic">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1><span>Harish</span> Masilamani</h1>
+            <h3 id="typing"></h3>
+            <div class="buttons">
+                <button class="btn primary">Know More</button>
+                <button class="btn secondary">Get in Touch</button>
+            </div>
+        </div>
+        <section id="about" class="about">
+            <h2>About <span>Me</span></h2>
+            <p class="subtitle">Personal details & academic background</p>
+
+            <div class="about-container">
+
+                <!-- Profile Image -->
+                <div class="about-img">
+                    <img src="profile.jpg.jpg" alt="profile">
+                </div>
+
+                <!-- Info Cards -->
+                <div class="about-cards">
+
+                    <div class="about-card">
+                        <h4>NAME</h4>
+                        <p>Harish Masilamani</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>DATE OF BIRTH</h4>
+                        <p>03 May 2006</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>AGE</h4>
+                        <p id="age"></p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>COURSE</h4>
+                        <p>B.Tech – AI & Data Science</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>STUDY PERIOD</h4>
+                        <p>2024 – 2028</p>
+                    </div>
+
+                    <div class="about-card">
+                        <h4>COLLEGE</h4>
+                        <p>Selvam College of Technology, Namakkal</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My <span>Projects</span></h2>
+        <p>Showcasing my work in AI & Data Science</p>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>AI Chatbot Assistant</h3>
+                <p>Python NLP chatbot for automation</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Data Visualization Dashboard</h3>
+                <p>Interactive charts using Python</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Image Classification Model</h3>
+                <p>Deep learning CNN model</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in <span>Touch</span></h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>📞 9360012403</p>
+                <p>📧 2024110027@selvamtech.edu.in</p>
+                <p>📧 harishmasilamani96@gmail.com</p>
+                <p><a href="https://www.linkedin.com/in/harish-masilamani-00b42b37a" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
+                <p><a href="https://www.instagram.com/__solo__harish__/?hl=en" target="_blank"><i class="fab fa-instagram"></i> Instagram Profile</a></p>
+            </div>
+
+            <form action="https://submitform-zywnsm5euq-uc.a.run.app/api/5ir4p12TBOFLDaOTeQIY" method="POST">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="your@email.com" required>
+                <textarea placeholder="Write your message..."></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Admin Login</h2>
+            <div class="login-form">
+                <label>Email:</label>
+                <input type="email" id="username" placeholder="Enter email">
+                <label>Password:</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <button onclick="login()" class="btn primary">Login</button>
+            </div>
         </div>
     </div>
 
-</div>
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="admin-panel">
+        <div class="admin-header">
+            <h3>Admin Panel</h3>
+            <button onclick="logout()" class="btn secondary">Logout</button>
+        </div>
+        <div class="admin-options">
+            <button onclick="openSettingsModal()" class="admin-btn">⚙️ Settings</button>
+            <button onclick="openProjectsModal()" class="admin-btn">📊 Projects</button>
+            <button onclick="openResumeModal()" class="admin-btn">📄 Resume</button>
+        </div>
+    </div>
 
+    <!-- SETTINGS MODAL -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content settings-modal">
+            <span class="close" onclick="closeSettingsModal()">&times;</span>
+            <h2>Portfolio Settings</h2>
+            <div class="settings-form">
+                <div class="setting-item">
+                    <label>Portfolio Title:</label>
+                    <input type="text" id="portfolioTitle" placeholder="Enter portfolio title">
+                </div>
+                <div class="setting-item">
+                    <label>Tagline:</label>
+                    <input type="text" id="tagline" placeholder="e.g., Innovator | AI Student | Developer">
+                </div>
+                <div class="setting-item">
+                    <label>Phone:</label>
+                    <input type="tel" id="phone" placeholder="Enter phone number">
+                </div>
+                <div class="setting-item">
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="setting-item">
+                    <label>College Name:</label>
+                    <input type="text" id="college" placeholder="Enter college name">
+                </div>
+                <div class="setting-item">
+                    <label>LinkedIn URL:</label>
+                    <input type="url" id="linkedin" placeholder="Enter LinkedIn profile URL">
+                </div>
+                <div class="setting-item">
+                    <label>Instagram URL:</label>
+                    <input type="url" id="instagram" placeholder="Enter Instagram profile URL">
+                </div>
+                <div class="setting-item">
+                    <label>Profile Photo URL:</label>
+                    <input type="text" id="profilePhoto" placeholder="Enter profile photo URL or image path">
+                </div>
+                <div class="button-group">
+                    <button onclick="saveSettings()" class="btn primary">Save Settings</button>
+                    <button onclick="closeSettingsModal()" class="btn secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS MANAGEMENT MODAL -->
+    <div id="projectsModal" class="modal">
+        <div class="modal-content settings-modal">
+            <span class="close" onclick="closeProjectsModal()">&times;</span>
+            <h2>Manage Projects</h2>
+            <div class="settings-form">
+                <div class="setting-item">
+                    <label>Project Title:</label>
+                    <input type="text" id="projectTitle" placeholder="Enter project title">
+                </div>
+                <div class="setting-item">
+                    <label>Project Description:</label>
+                    <textarea id="projectDesc" placeholder="Enter project description" rows="3"></textarea>
+                </div>
+                <div class="setting-item">
+                    <label>Project Image URL:</label>
+                    <input type="text" id="projectImage" placeholder="Enter image URL or file path">
+                </div>
+                <div class="button-group">
+                    <button onclick="addProject()" class="btn primary">+ Add Project</button>
+                </div>
+                <div class="projects-list">
+                    <h4>Current Projects:</h4>
+                    <div id="projectsList"></div>
+                </div>
+                <div class="button-group">
+                    <button onclick="closeProjectsModal()" class="btn secondary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESUME MANAGEMENT MODAL -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content settings-modal">
+            <span class="close" onclick="closeResumeModal()">&times;</span>
+            <h2>Manage Resume</h2>
+            <div class="settings-form">
+                <div class="setting-item">
+                    <label>Resume Download Link:</label>
+                    <input type="url" id="resumeUrl" placeholder="Enter resume file URL or path">
+                </div>
+                <div class="button-group">
+                    <button onclick="saveResume()" class="btn primary">Save Resume</button>
+                </div>
+                <div class="resume-preview">
+                    <h4>Current Resume:</h4>
+                    <p id="resumeStatus">No resume uploaded</p>
+                </div>
+                <div class="button-group">
+                    <button onclick="closeResumeModal()" class="btn secondary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
